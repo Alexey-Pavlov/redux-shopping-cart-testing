@@ -35,7 +35,7 @@ describe('products reducer', () => {
         const initialState = undefined;
         const action = receivedProducts(products.slice(0, 2));
         let result = productsReducer(initialState, action);
-        expect(Object.keys(result.products).length).toEqual(products.length);
+        expect(Object.keys(result.products).length).toEqual(2);
         const secondAction = receivedProducts(products.slice(2, 4));
         result = productsReducer(result, secondAction);
         expect(Object.keys(result.products).length).toEqual(4);
